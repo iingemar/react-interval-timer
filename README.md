@@ -1,11 +1,16 @@
-# webpack-template
-React and webpack 4 template
+# react-interval-timer
+Running interval timer made with React.
 
-Install all dependencies
+<strong>How do I run this locally?</strong>
 
-<code>npm install</code>
+To run webpack and recompile javascripts on change:
 
-Run dev server
+*    Install all npm dependencies<br/>
+    <code>npm install</code>
 
-<code>npm run dev</code>
+*    Start webpack dev server<br/>
+    <code>npm run server</code>
+
+*    Your interval timer site should live here! :D<br/>
+    http://localhost:8081  
 
