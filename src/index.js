@@ -5,7 +5,7 @@ import Header from './Header';
 import Star from './Star';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
-
+import Timer from './Timer';
 import sum from './sum';
 
 console.log('yo');
@@ -21,6 +21,8 @@ function App() {
     return (
         <div>
             <Header/>
+            <Welcome name="apa"/>
+            <Timer/>
             <Button>adsf</Button>
             <Star/>
         </div>
