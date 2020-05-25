@@ -4,6 +4,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -82,6 +83,9 @@ module.exports = {
         ]
     },
     plugins: [
+        // To strip all locales except “en”
+        new MomentLocalesPlugin(),
+
         new HtmlWebpackPlugin({template: './src/index.html'}),
         new MiniCssExtractPlugin({
             filename: '[name].[hash].css'
