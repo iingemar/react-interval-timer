@@ -8,7 +8,9 @@ export default class extends React.Component {
         super(props);
 
         this.timer = moment();
-
+        this.timer.minute(10);
+        this.timer.second(0);
+        this.timer.millisecond(0);
         this.state = {
             time: this.timer.format('mm:ss')
         };
@@ -18,13 +20,13 @@ export default class extends React.Component {
 
     updateTime() {
         this.setState({
-            time: this.timer.add(1, 'seconds').format('mm:ss')
+            time: this.timer.subtract(1, 'seconds').format('mm:ss')
         })
     }
 
     render() {
         return (
-            <h1>Hello! { this.state.time }</h1>
+            <h1>{ this.state.time }</h1>
         );
     }
 }

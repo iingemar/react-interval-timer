@@ -1,33 +1,9 @@
-import PropTypes from "prop-types";
-import React, { Component } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
-import Header from './Header';
-import Star from './Star';
+import App from './App';
+
+// Importing the Bootstrap CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Button';
-import Timer from './Timer';
-import sum from './sum';
-
-console.log('yo');
-
-const result = sum(5,4);
-console.log(result);
-
-function Welcome(props) {
-    return <h1>Hello, {props.name}</h1>;
-}
-
-function App() {
-    return (
-        <div>
-            <Header/>
-            <Welcome name="apa"/>
-            <Timer/>
-            <Button>adsf</Button>
-            <Star/>
-        </div>
-    );
-}
 
 ReactDOM.render(
     <App />,
