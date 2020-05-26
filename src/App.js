@@ -7,8 +7,44 @@ import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
 import './App.css';
 import Timer from './Timer';
+import * as types from './IntervalTypes';
+
 
 export default class extends React.Component {
+    constructor(props) {
+        super(props);
+        const reps = [
+            {
+                type: types.INTERVAL_TYPE_RUN,
+                seconds: 60
+            },
+            {
+                type: types.INTERVAL_TYPE_REST,
+                seconds: 60
+            },
+            {
+                type: types.INTERVAL_TYPE_RUN,
+                seconds: 30
+            },
+            {
+                type: types.INTERVAL_TYPE_REST,
+                seconds: 60
+            },
+            {
+                type: types.INTERVAL_TYPE_RUN,
+                seconds: 30
+            },
+            {
+                type: types.INTERVAL_TYPE_REST,
+                seconds: 60
+            },
+        ];
+        this.setState({
+            reps: reps
+        });
+        this.handleClick = this.handleClick.bind(this);
+    }
+
     render() {
         return (
             <Container>
