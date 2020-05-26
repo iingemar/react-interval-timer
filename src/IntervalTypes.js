@@ -1,2 +1,2 @@
-export const INTERVAL_TYPE_RUN = 0;
-export const INTERVAL_TYPE_REST = 1;
+export const RUN = 0;
+export const REST = 1;
