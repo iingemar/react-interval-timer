@@ -8,8 +8,8 @@ export default class extends React.Component {
         super(props);
 
         this.timer = moment();
-        this.timer.minute(10);
-        this.timer.second(0);
+        this.timer.minute(0);
+        this.timer.second(this.props.seconds);
         this.timer.millisecond(0);
         this.state = {
             time: this.timer.format('mm:ss')

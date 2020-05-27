@@ -8,7 +8,7 @@ import Button from 'react-bootstrap/Button';
 import './App.css';
 import Timer from './Timer';
 import * as intervalType from './IntervalTypes';
-
+import IntervalSet from "./IntervalSet";
 
 export default class extends React.Component {
     constructor(props) {
@@ -27,6 +27,12 @@ export default class extends React.Component {
         // this.handleClick = this.handleClick.bind(this);
     }
 
+    renderSet(set, index) {
+        return (
+            <IntervalSet key={index} set={set}/>
+        );
+    }
+
     render() {
         return (
             <Container>
@@ -39,24 +45,7 @@ export default class extends React.Component {
                         <Button variant="secondary" size="lg">Stop</Button>{' '}
                     </Col>
                 </Row>
-                <Row>
-                    <Col>
-                        <Alert variant="info">
-                            <Row>
-                                <Col><h1>Spring!</h1></Col>
-                                <Col><Timer /></Col>
-                            </Row>
-                        </Alert>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col><h2>Vila</h2></Col>
-                    <Col><Timer /></Col>
-                </Row>
-                <Row>
-                    <Col><h2>Spring</h2></Col>
-                    <Col><Timer /></Col>
-                </Row>
+                { this.state.set.map(this.renderSet) }
             </Container>
         );
     }
